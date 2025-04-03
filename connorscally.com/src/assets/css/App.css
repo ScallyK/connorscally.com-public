@@ -1,0 +1,17 @@
+.loading-screen{
+    color: #FFF;
+    text-align: left;
+    font-family: "Major Mono Display", monospace;
+    font-size: 8rem;
+    font-weight: 400;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: flex;
+}
+
+@media (max-width: 1025px) {
+    .loading-screen {
+        font-size: 4rem;
+    }
+}

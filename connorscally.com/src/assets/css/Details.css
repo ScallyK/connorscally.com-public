@@ -1,0 +1,116 @@
+.tac-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+.tac-bar-container {
+    position: absolute;
+    top: 0;
+    margin-top: 4%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20%;
+}
+
+.tac-bar-background {
+    width: 150%;
+}
+
+.tac-bar-contents {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: rgba(255, 255, 255, 0.35);
+    border: 1px solid transparent;
+    border-radius: 10px;
+    width: 95%;
+    height: 70%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.tac-bar-text {
+    color: #FFF;
+    font-family: "Major Mono Display", monospace;
+    font-size: 1.3rem;
+    font-weight: 400;
+    text-align: center;
+    line-height: normal;
+    white-space: pre;
+}
+
+.tac-contents {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    position: relative;
+    width: 52%;
+    height: 100%;
+    margin-top: 15%;
+    margin-right: 50%;
+}
+
+.tac-background {
+    width: 45vw;
+    border: 1px solid white;
+    border-radius: 60px;
+}
+
+.toc-text {
+    color: #FFF;
+    font-family: "Major Mono Display", monospace;
+    font-size: 0.6vw;
+    font-weight: 400;
+    text-align: left;
+    text-transform: lowercase;
+    line-height: normal;
+    position: absolute;
+    width: 85%;
+    height: 100%;
+    margin-top: 5%;
+}
+
+.cats-container-details {
+    position: absolute;
+    margin-left: 50%;
+}
+
+@media (max-width: 1025px) {
+    .tac-contents {
+        margin-right: 0%;
+    }
+
+    .tac-background{
+        width: 170vw;
+    }
+
+    .toc-text{
+        font-size: 1.6vw;
+        width: 175%;
+    }
+
+    .main-cats-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 60%;
+        margin: 0 auto;
+        border-color: white;
+        border-radius: 12px;
+        border-width: 1px;
+        border-style: solid;
+        align-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+}

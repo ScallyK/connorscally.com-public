@@ -1,0 +1,66 @@
+.main-contact-content {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    z-index: 0;
+    flex-wrap: wrap;
+}
+
+.main-text {
+    display: flex;
+    flex-direction: column;
+
+    flex-shrink: 0;
+
+    z-index: 1;
+    position: absolute;
+    text-align: left;
+    margin-left: 5%;
+}
+
+.contact-text {
+    color: #FFF;
+    font-family: "Major Mono Display";
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: left;
+    position: relative;
+    width: max-content;
+}
+
+.phone-text, .email-text {
+    color: #FFF;
+    font-family: "Major Mono Display";
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: left;
+    width: max-content;
+}
+
+.contact-divider{
+    width: 50%;
+}
+
+.contact-spotlight{
+    visibility: visible !important;
+}
+
+@media (max-width: 1025px) {
+
+    .main-text {
+        text-align: center;
+        margin-left: 28%;
+    }
+    .contact-text {
+        font-size: 1.5rem;
+    }
+    .phone-text, .email-text {
+        font-size: 0.9rem;
+    }
+}
