@@ -1,6 +1,4 @@
 import BackButton from './BackButton.js';
-import MoreGlyph from './assets/images/More-Glyph.svg';
-import menu_bar_background from './assets/images/Project-Bar-Outline.svg';
 import * as motion from "motion/react-client"
 import ProjectBoxes, { projectData, Project } from './ProjectsBoxes.tsx';
 import React from 'react';
@@ -34,7 +32,7 @@ const Projects: React.FC = () => {
             <div className="main-projects-container">
                 <BackButton />
                 <div className='menu-bar-container'>
-                    <img src={menu_bar_background} alt="background of the projects menu bar" className='menu-bar-background' />
+                    <img src="/Project-Bar-Outline.svg" alt="background of the projects menu bar" className='menu-bar-background' />
                     <div className='menu-bar-contents'>
                         <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.8 }}> <button id='web' className='menu-bar-button' onClick={() => setFilter('web')}>web</button> </motion.div>
                         <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.8 }}> <button id='mobile' className='menu-bar-button' onClick={() => setFilter('mobile')}>mobile</button> </motion.div>
@@ -45,7 +43,7 @@ const Projects: React.FC = () => {
                 <ProjectBoxes projects={projectsToRender} />
                 <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.8 }} className='more-glyph-button'>
                     <button className='make-transparent' onClick={handleNext}>
-                        <img className='more-glyph-img' src={MoreGlyph} alt="Button for moving to the next project." />
+                        <img className='more-glyph-img' src="/More-Glyph.svg" alt="Button for moving to the next project." />
                     </button>
                 </motion.div>
             </div>

@@ -38,8 +38,8 @@ a {
 
 .name-text {
   color: #FFF;
-  font-family: "Major Mono Display";
-  font-size: 8vw;
+  font-family: "Montserrat" !important;
+  font-size: 12vh !important;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -111,12 +111,12 @@ a {
 
 .profile-pic-container {
   display: flex;
-  width: 34.25rem;
-  height: 34.25rem;
+  width: 35vh;
+  height: 35vh;
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-  margin-top: 10%;
+  margin-top: 25vh;
   position: relative;
   z-index: 0;
 }
@@ -165,8 +165,8 @@ a {
 
 .profile-pic-div {
   display: flex;
-  width: 32rem;
-  height: 32rem;
+  width: 32vh;
+  height: 32vh;
   border-radius: 50%;
   position: relative;
   z-index: 1;
@@ -177,8 +177,8 @@ a {
 
 .profile-pic {
   display: flex;
-  width: 30.85rem;
-  height: 30.85rem;
+  width: 31vh;
+  height: 31vh;
   border-radius: 50%;
   position: relative;
   z-index: 1;
@@ -187,7 +187,7 @@ a {
 .profile-pic-div::before {
   content: "";
   position: absolute;
-  inset: 5px;
+  inset: 3px;
   border-radius: 50%;
   padding: 5px;
   background: linear-gradient(360deg, #313545, #121118);
@@ -201,8 +201,8 @@ a {
   display: flex;
   flex-direction: column;
   position: relative;
-  width: 7rem;
-  height: 7rem;
+  width: 5vw;
+  height: 5vw;
   border-radius: 25%;
   border-style: solid;
   border-width: 0.1rem;
@@ -212,12 +212,13 @@ a {
 
 .nav-menu {
   position: absolute;
-  top: 78.5%;
+  top: 75vh;
   left: 50%;
   transform: translate(-50%, -50%);
   margin-bottom: 50%;
 
   white-space: pre;
+  z-index: 99;
 }
 
 .nav-menu-button {
@@ -277,6 +278,7 @@ a {
 .footer-content {
   position: absolute;
   bottom: 0;
+  z-index: 1;
 }
 
 .footer-texts-containers {
@@ -328,7 +330,7 @@ a {
   position: fixed;
   bottom: 0;
   right: 0;
-  margin-bottom: 5%;
+  margin-bottom: 6vh;
   margin-right: 1%;
 }
 
@@ -402,38 +404,33 @@ a {
 
   .profile-pic-container {
     display: flex;
-    width: 10rem;
-    height: 10rem;
+    width: 20.5vh;
+    height: 20.5vh;
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-    margin-top: 10%;
+    margin-top: 0%;
     position: relative;
     z-index: 0;
   }
 
   .profile-pic {
     display: flex;
-    width: 9rem;
-    height: 9rem;
+    width: 18vh;
+    height: 18vh;
     border-radius: 50%;
     position: relative;
     z-index: 1;
   }
 
-  .profile-pic {
-    display: flex;
-    width: 9rem;
-    height: 9rem;
-    border-radius: 50%;
-    position: relative;
-    z-index: 1;
+  .middle-content{
+    margin-top: 5vh;
   }
 
   .profile-pic-div {
     display: flex;
-    width: 10rem;
-    height: 10rem;
+    width: 19.5vh;
+    height: 19.5vh;
     border-radius: 50%;
     position: relative;
     z-index: 1;
@@ -447,7 +444,7 @@ a {
     flex-direction: column;
     align-items: flex-start;
     flex-shrink: 0;
-    /* margin-top: -5%; */
+    margin-top: 5%;
     margin-left: 1%;
     height: 30vh;
     width: 100vw;
@@ -456,7 +453,6 @@ a {
   .degree-text {
     color: #FFF;
     font-family: "Major Mono Display";
-    font-size: 1.7rem !important;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -465,14 +461,15 @@ a {
     margin-top: 0%;
   }
 
-  .job-text,
-  .degree-text {
-    width: fit-content;
-    font-size: 3.5vw !important;
+  .name-text{
+    font-size: 6vw !important;
+    font-weight: 500 !important;
+    margin-left: 1%;
   }
 
-  .job-text {
-    margin-top: -2% !important;
+  .job-text, .degree-text {
+    margin-top: 2% !important;
+    font-size: 2.5vw !important;
   }
 
   .intro-divider {
@@ -480,13 +477,20 @@ a {
   }
 
   .nav-menu {
-    top: 68%;
+    top: 67%;
+    width: 6vh !important;
+    height: 6vh !important;
   }
 
-  .spotify-plugin-container {
-    top: 14vh !important;
-    margin-right: 5% !important;
+  .nav-menu-button{
+    font-size: 1.8vh;
   }
+
+  /* hide the spotify plugin on mobile */
+  .spotify-plugin-container {
+   visibility: hidden;
+  }
+   
 
   .links-bar-container {
     width: 97vw;
@@ -495,10 +499,11 @@ a {
   .name-date,
   .details-credits {
     font-size: 2vw;
+    white-space: pre !important;
   }
 
   .bottom-right-container {
-    margin-bottom: 10%;
+    margin-bottom: 8%;
   }
 
   .footer-texts-containers {
@@ -527,5 +532,43 @@ a {
 
   .old-website {
     font-size: 2.1vw;
+  }
+
+  .name-date{
+    width: 33% !important;
+    position: absolute;
+  }
+
+  .resume-button{
+    padding: 0.5rem 3.5rem;
+  }
+
+  /* .resume-button{
+  padding: 0.5vh 0.5vh;
+  width: 15vh;
+  position: absolute;
+  margin-left: 60vw;
+  top: 0;
+  margin-top: 10vh;
+  } */
+
+  .resume-text{
+    font-size: 2vh;
+  }
+
+  .bottom{
+    bottom: -5.5vh;
+  }
+
+  .top{
+    top: -5.5vh;
+  }
+
+  .right{
+    right: -25vw;
+  }
+
+  .left{
+    left: -20vw;
   }
 }

@@ -1,6 +1,5 @@
 import './assets/css/Contact.css'
 import './assets/css/glitch.scss'
-import divider from './assets/images/divider.svg';
 import BackButton from './BackButton.js';
 import * as THREE from 'three';
 import { EffectComposer } from 'three/addons/postprocessing/EffectComposer.js';
@@ -9,11 +8,10 @@ import { BokehPass } from 'three/addons/postprocessing/BokehPass.js'
 //@ts-expect-error because FilmGrainShader does not need to be typed
 import { FilmGrainShader } from './assets/shaders/FilmGrainPass.js';
 //@ts-expect-error because VignetteShader does not need to be typed
-import {VignetteShader } from './assets/shaders/VignettePass.js';
+import { VignetteShader } from './assets/shaders/VignettePass.js';
 import { ShaderPass } from 'three/addons/postprocessing/ShaderPass.js';
 import { OutputPass } from 'three/addons/postprocessing/OutputPass.js';
 import { useEffect, useRef } from 'react';
-import { Spotlight } from './components/core/spotlight';
 import { motion } from "framer-motion";
 
 function Contact() {
@@ -64,7 +62,7 @@ function Contact() {
 
             const filmGrainPass = new ShaderPass(FilmGrainShader);
             composer.addPass(filmGrainPass);
-            
+
             const vignettePass = new ShaderPass(VignetteShader);
             vignettePass.uniforms["offset"].value = 100;
             vignettePass.uniforms["darkness"].value = 75;
@@ -305,13 +303,14 @@ function Contact() {
     return (
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
             <div className='main-contact-content' ref={mountRef}>
-                <BackButton />
-                <Spotlight className='bg-[rgba(255,255,255,0.05)] contact-spotlight' size={1200} springOptions={{ bounce: 0.3, duration: 0.1, }} />
+                <div className='contact-back-button-div'>
+                    <BackButton />
+                </div>
                 <div className='main-text' ref={textRef}>
                     <div>
-                        <h1 className="glitch" data-text="contact me">contact me</h1>
+                        <h1 className="glitch contact-me-text" data-text="contact me">contact me</h1>
                     </div>
-                    <img src={divider} alt="divding bar underneath the contact me text" className='contact-divider' />
+                    <img src="/divider.svg" alt="divding bar underneath the contact me text" className='contact-divider' />
                     <h2 className='phone-text'>469-905-2865</h2>
                     <h2 ref={innerMountRef} className='email-text'>me@connorscally.com</h2>
                 </div>

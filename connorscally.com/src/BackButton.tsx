@@ -1,4 +1,3 @@
-import BackGlyph from './assets/images/Back-Glyph.svg';
 import * as motion from "motion/react-client"
 import { useNavigate } from 'react-router-dom';
 import './assets/css/BackButton.css';
@@ -18,7 +17,7 @@ export default function BackButton() {
                 <div className="border-trail-wrapper">
                     <BorderTrail style={{ boxShadow: '40px 40px 40px 200px rgb(255 255 255 / 80%)' }} size={60} />
                 </div>
-                <img src={BackGlyph} alt="Back Button SVG" className='back-button-img' />
+                <img src="/Back-Glyph.svg" alt="Back Button SVG" className='back-button-img' />
             </button>
         </motion.div>
     )

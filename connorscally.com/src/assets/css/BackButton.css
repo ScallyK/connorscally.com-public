@@ -18,8 +18,8 @@
     align-items: center;
     justify-content: center;
     position: relative;
-    width: 60px;
-    height: 60px;
+    width: 4.8vh;
+    height: 4.8vh;
     overflow: hidden;
 }
 
@@ -60,5 +60,9 @@
     .back-button{
         width: 77% !important;
         height: 100% !important;
+    }
+
+    .border-trail-wrapper{
+        visibility: hidden;
     }
 }

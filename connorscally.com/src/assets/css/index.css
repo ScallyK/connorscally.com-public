@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @layer theme, base, components, utilities;
 @import "tailwindcss/theme.css" layer(theme);
 @import "tailwindcss/utilities.css" layer(utilities);
@@ -12,7 +13,7 @@
   width: 100vw;
   height: 100vh;
 
-  background-image: url('../images/default_background.svg');
+  background-image: url('/default_background.svg');
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;

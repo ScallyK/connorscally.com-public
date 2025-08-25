@@ -10,13 +10,18 @@
 }
 
 .about-background-video {
+    position: fixed;
     top: 50%;
     left: 50%;
+    transform: translate(-50%, -50%);
     width: 100vw;
     height: 100vh;
     object-fit: cover;
     z-index: 1;
+    margin: 0;
+    padding: 0;
 }
+
 
 .grain {
     position: absolute;
@@ -60,12 +65,12 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    margin-top: 20%;
+    margin-top: 22%;
 }
 
 .about-back-button {
-    margin-top: 17%;
-    margin-left: 73%;
+    margin-top: 15%;
+    margin-left: 75%;
     position: absolute;
 }
 
@@ -74,7 +79,7 @@
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-    margin-top: 30%;
+    margin-top: 34%;
     position: absolute;
     z-index: 0;
 }
@@ -107,8 +112,8 @@
 
 .about-profile-pic-div {
     display: flex;
-    width: 14rem;
-    height: 14rem;
+    width: 15vh;
+    height: 15vh;
     border-radius: 50%;
     position: relative;
     z-index: 1;
@@ -119,8 +124,8 @@
 
 .about-profile-pic {
     display: flex;
-    width: 12rem;
-    height: 12rem;
+    width: 12vh;
+    height: 12vh;
     border-radius: 50%;
     position: relative;
     z-index: 1;
@@ -129,9 +134,9 @@
 .about-profile-pic-div::before {
     content: "";
     position: absolute;
-    inset: 13px;
+    inset: 1.2vh;
     border-radius: 50%;
-    padding: 3px;
+    padding: 5px;
     background: white;
     -webkit-mask: linear-gradient(white, white) content-box, linear-gradient(white, white);
     -webkit-mask-composite: destination-out;
@@ -144,11 +149,27 @@
     color: #FFF;
     text-align: center;
     font-family: "Major Mono Display";
-    font-size: 0.8vw;
+    font-size: 1rem;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
     margin-top: 60%;
+    text-align: center;
+    width: 70%;
+    white-space: pre-wrap;
+    display: inline-grid;
+}
+
+.about-text-mid {
+    position: absolute;
+    color: #FFF;
+    text-align: center;
+    font-family: "Major Mono Display";
+    font-size: 1.4vh;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 70%;
     text-align: center;
     width: 70%;
     white-space: pre-wrap;
@@ -160,7 +181,7 @@
     color: #FFF;
     text-align: center;
     font-family: "Major Mono Display";
-    font-size: 0.8vw;
+    font-size: 1.4vh;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -171,13 +192,6 @@
 
 .looping-text {
     color: #FFF;
-    text-align: center;
-    font-family: "Major Mono Display";
-    font-size: 0.8vw;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    text-align: center;
     padding-top: 15px;
     padding-bottom: 15px;
 }
@@ -187,10 +201,22 @@
         width: 100vw;
     }
 
+    .about-profile-pic-div {
+        display: flex;
+        width: 12vh;
+        height: 12vh;
+        border-radius: 50%;
+        position: relative;
+        z-index: 1;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+    }
+
     .about-profile-pic {
         display: flex;
-        width: 6rem;
-        height: 6rem;
+        width: 9vh;
+        height: 9vh;
         border-radius: 50%;
         position: relative;
         z-index: 1;
@@ -200,9 +226,9 @@
     .about-profile-pic-div::before {
         content: "";
         position: absolute;
-        inset: 5px;
+        inset: 1.2vh;
         border-radius: 50%;
-        padding: 3px;
+        padding: 5px;
         background: white;
         -webkit-mask: linear-gradient(white, white) content-box, linear-gradient(white, white);
         -webkit-mask-composite: destination-out;
@@ -210,25 +236,16 @@
         z-index: 0;
     }
 
-
-    .about-profile-pic-div {
-        display: flex;
-        width: 7rem;
-        height: 7rem;
-        border-radius: 50%;
-        position: relative;
-        z-index: 1;
-        justify-content: center;
-        align-content: center;
-        align-items: center;
-    }
-
     .about-profile-pic-container {
-        margin-top: 28%;
+        margin-top: 30%;
     }
 
     .about-title {
         font-size: 5vw;
+    }
+
+    .about-text-mid {
+        font-size: 2vw;
     }
 
     .about-text-sub {
@@ -240,8 +257,16 @@
         font-size: 2vw !important;
     }
 
-    #about-text1, #about-text2, #about-text3 {
+    #about-text1,
+    #about-text2,
+    #about-text3 {
         font-size: 2vw !important;
     }
-    
+
+    .about-back-button {
+        margin-top: 15%;
+        margin-left: 82%;
+        position: absolute;
+    }
+
 }

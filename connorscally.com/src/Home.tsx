@@ -1,13 +1,5 @@
 import './assets/css/Home.css'
-import divider from './assets/images/divider.svg';
-import lava from './assets/videos/Lava.mp4';
-import profile_pic_1 from './assets/images/profile-1.jpeg'
-import discord from './assets/images/discord.svg'
-import dpb from './assets/images/dpb.svg'
-import github from './assets/images/github.svg'
-import steam from './assets/images/steam.svg'
-import twitch from './assets/images/twitch.svg'
-import linkedin from './assets/images/linkedin.svg'
+import './assets/css/glitch.scss'
 import * as motion from "motion/react-client"
 import { gsap } from "gsap";
 import { useState, useEffect, useRef } from 'react';
@@ -20,9 +12,9 @@ import { GlowEffect } from './components/core/glow-effect';
 import { Tilt } from './components/core/tilt'
 import { Spotlight } from './components/core/spotlight';
 import resume from './assets/hostedFiles/resume.pdf'
+import SpotifyPlugin from './SpotifyPlugin';
 
-
-function App() {
+function Home() {
 
   const navigate = useNavigate();
 
@@ -120,11 +112,12 @@ function App() {
   return (
     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
       <div className='main-content'>
+        <SpotifyPlugin />
         <div className='intro-group'>
-          <TextScramble className="name-text" duration={1.2}>CONNOR SCALLY</TextScramble>
-          <TextScramble className='job-text glitch' duration={1.2} characterSet=' 123456789' data-text= 'full-stack-developer'>full-stack developer</TextScramble>
-          <TextScramble className='degree-text' duration={1.2} characterSet=' 123456789'>computer scientist</TextScramble>
-          <img src={divider} alt="divding bar underneath the main text" className='intro-divider' />
+          <TextScramble className="name-text" duration={1.2} data-text='CONNOR SCALLY'>CONNOR SCALLY</TextScramble>
+          <TextScramble className='job-text glitch' duration={1.2} characterSet=' 123456789' data-text='artifical intelligence engineer'>artifical intelligence engineer</TextScramble>
+          <TextScramble className='degree-text glitch' duration={1.2} characterSet=' 123456789' data-text='cs alumni @ utd'>cs alumni @ utd</TextScramble>
+          <img src="/divider.svg" alt="divding bar underneath the main text" className='intro-divider' />
 
           <Magnetic>
             <a href={resume} download>
@@ -139,12 +132,12 @@ function App() {
         <div className='middle-content'>
           <div className='profile-pic-container'>
             <GlowEffect colors={['#FFF']} mode='breathe' blur='soft' duration={4} scale={0.99} className='profile-pic-glow' />
-            <video autoPlay muted loop playsInline className="profile-background-video">
-              <source src={lava} type="video/mp4" />
+            <video preload="auto" autoPlay muted loop playsInline poster="/first_frame3.png" className="profile-background-video">
+              <source src="/Lava.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
             <div className='profile-pic-div'>
-              <img src={profile_pic_1} alt="Connor Scally's profile picture." className='profile-pic' />
+              <img src="/profile-1.jpeg" alt="Connor Scally's profile picture." className='profile-pic' />
             </div>
           </div>
 
@@ -178,42 +171,42 @@ function App() {
                   <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.8 }}>
                     <a href='https://www.github.com/scallyk'>
                       <button className='link-button'>
-                        <img className='link-button-img' src={github} alt="Button for Connor Scally's GitHub profile." />
+                        <img className='link-button-img' src="/github.svg" alt="Button for Connor Scally's GitHub profile." />
                       </button>
                     </a>
                   </motion.div>
                   <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.8 }}>
                     <a href='https://www.linkedin.com/in/connor-scally'>
                       <button className='link-button'>
-                        <img className='link-button-img' src={linkedin} alt="Button for Connor Scally's LinkedIn profile." />
+                        <img className='link-button-img' src="/linkedin.svg" alt="Button for Connor Scally's LinkedIn profile." />
                       </button>
                     </a>
                   </motion.div>
                   <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.8 }}>
                     <a href='https://www.discordapp.com/users/332252883158564884'>
                       <button className='link-button'>
-                        <img className='link-button-img' src={discord} alt="Button for Connor Scally's Discord profile." />
+                        <img className='link-button-img' src="/discord.svg" alt="Button for Connor Scally's Discord profile." />
                       </button>
                     </a>
                   </motion.div>
                   <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.8 }}>
                     <a href='https://steamcommunity.com/profiles/76561198213915209/'>
                       <button className='link-button'>
-                        <img className='link-button-img' src={steam} alt="Button for Connor Scally's Steam profile." />
+                        <img className='link-button-img' src="/steam.svg" alt="Button for Connor Scally's Steam profile." />
                       </button>
                     </a>
                   </motion.div>
                   <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.8 }}>
                     <a href='https://www.twitch.tv/antimune'>
                       <button className='link-button'>
-                        <img className='link-button-img' src={twitch} alt="Button for Connor Scally's Twitch profile." />
+                        <img className='link-button-img' src="/twitch.svg" alt="Button for Connor Scally's Twitch profile." />
                       </button>
                     </a>
                   </motion.div>
                   <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.8 }}>
                     <a href='https://www.dallaspcbuilder.com/'>
                       <button className='link-button'>
-                        <img className='link-button-img' src={dpb} alt="Button for the Dallas PC Builder website." />
+                        <img className='link-button-img' src="/dpb.svg" alt="Button for the Dallas PC Builder website." />
                       </button>
                     </a>
                   </motion.div>
@@ -223,7 +216,7 @@ function App() {
           </Tilt>
         </div>
         <div className='footer-texts-containers'>
-          <TextEffect per='char' delay={0.5} className='name-date' variants={{ container: { hidden: { opacity: 0, }, visible: { opacity: 1, transition: { staggerChildren: 0.05, }, }, }, item: { hidden: { opacity: 0, rotateX: 90, y: 10, }, visible: { opacity: 1, rotateX: 0, y: 0, transition: { duration: 0.2, }, }, }, }}>@2025 connor K. scally</TextEffect>
+          <TextEffect per='char' delay={0.5} className='name-date' variants={{ container: { hidden: { opacity: 0, }, visible: { opacity: 1, transition: { staggerChildren: 0.05, }, }, }, item: { hidden: { opacity: 0, rotateX: 90, y: 10, }, visible: { opacity: 1, rotateX: 0, y: 0, transition: { duration: 0.2, }, }, }, }}>@2025 connor k. scally</TextEffect>
           <TextEffect per='char' delay={0.5} className='better-on-desktop' variants={{ container: { hidden: { opacity: 0, }, visible: { opacity: 1, transition: { staggerChildren: 0.05, }, }, }, item: { hidden: { opacity: 0, rotateX: 90, y: 10, }, visible: { opacity: 1, rotateX: 0, y: 0, transition: { duration: 0.2, }, }, }, }}>this site is better on desktop.</TextEffect>
           <div className='details-credits'>
             <TextEffect per='word' delay={0.5} className='name-date' preset='slide'>all rights reserved.</TextEffect>
@@ -242,4 +235,4 @@ function App() {
   )
 }
 
-export default App  
+export default Home  

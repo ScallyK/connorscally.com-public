@@ -14,16 +14,32 @@
 .project-background {
     height: 60vh;
     display: flex;
+    opacity: 0.75 !important;
 }
 
 .project-title {
     color: white;
     font-family: "Major Mono Display";
-    font-size: 3rem;
+    font-size: 4vh;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    text-align: left;
+    margin-top: 5%;
+    position: absolute;
+    top: 0;
+    margin-left: 3%;
+    text-transform: lowercase;
+}
+
+.nova-project-title {
+    color: white;
+    font-family: "Major Mono Display";
+    font-size: 3vh;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    text-align: center;
+    text-align: left;
     margin-top: 5%;
     position: absolute;
     top: 0;
@@ -38,12 +54,12 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    text-align: center;
+    text-align: left;
     margin-top: 2%;
     position: absolute;
     top: 0;
     margin-left: 3.4%;
-    margin-top: 10%;
+    margin-top: 12%;
     text-transform: lowercase;
 }
 
@@ -127,13 +143,13 @@
     }
 
     .project-subtitle{
-        font-size: 3vw;
+        font-size: 1.2vh;
         margin-top: 16%;
         text-align: left;
     }
 
     .exterior-project-screenshot{
-        margin-top: 22%;
+        margin-top: 24%;
         border-radius: 12px;
     }
 
@@ -152,7 +168,7 @@
     #scorecery .exterior-project-screenshot {
         border-radius: 12px !important;
         width: 20% !important;
-        margin-left: 3% !important;
+        margin-top: 22%;
     }
 
     #esp32 .exterior-project-screenshot{
@@ -169,5 +185,43 @@
     .project-screenshot{
         border-radius: 12px !important;
     }
+
+    .chessvision-screenshot{
+        width:55% !important;
+    }
+
+    .iam-exterior-project-screenshot{
+        width: 65% !important;
+        margin-left: 15%;
+    }
+
+    .iam-title{
+        font-size: 3vw !important;
+    }
+
+    .iam-subtitle{
+        font-size: 2vw !important;
+    }
+
+    .nova-project-title, .scorecery-title{
+        font-size: 3vw !important;
+    }
+
+    .nova-project-subtitle, .scorecery-subtitle{
+        font-size: 2vw !important;
+    }
+
+    .scorecery1{
+        margin-left: 15.5% !important;
+    }
+    
+    .scorecery2{
+        margin-left: 61.5% !important;
+    }
+
+    .scorecery3{
+        margin-left: 38.5% !important;
+    }
+    
   }
   

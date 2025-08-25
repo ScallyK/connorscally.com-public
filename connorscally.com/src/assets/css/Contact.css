@@ -49,6 +49,7 @@
 
 .contact-spotlight{
     visibility: visible !important;
+    z-index: 1;
 }
 
 @media (max-width: 1025px) {
@@ -62,5 +63,15 @@
     }
     .phone-text, .email-text {
         font-size: 0.9rem;
+    }
+    .contact-back-button-div{
+        margin-top: 15% !important;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    .contact-me-text{
+        font-size: 4.5vw !important;
     }
 }

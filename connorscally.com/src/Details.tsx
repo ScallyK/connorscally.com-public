@@ -1,7 +1,5 @@
 import BackButton from './BackButton';
 import Cats from './Cats';
-import tacBarBackground from './assets/images/Project-Bar-Outline.svg';
-import tacBackground from './assets/images/Glass-Pane.svg';
 import './assets/css/Details.css';
 import { motion } from "framer-motion";
 import React, { JSX } from 'react';
@@ -23,7 +21,7 @@ function TermsAndConditionsBar(): JSX.Element {
     return (
         <div className="tac-bar-container">
             <img
-                src={tacBarBackground}
+                src="/Project-Bar-Outline.svg"
                 alt="Background of the terms and conditions menu bar"
                 className="tac-bar-background"
             />
@@ -46,7 +44,7 @@ function TermsAndConditionsContent(): JSX.Element {
     return (
         <div className="tac-contents">
             <img
-                src={tacBackground}
+                src="/Glass-Pane.svg"
                 alt="Glass pane effect for center content"
                 className="tac-background"
             />

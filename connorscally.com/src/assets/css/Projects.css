@@ -46,10 +46,10 @@
     border: none;
     outline: none;
     cursor: pointer;
-    color: black;
+    color: white;
     text-align: center;
     font-family: "Major Mono Display";
-    font-size: 1rem;
+    font-size: 1.2vh;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -95,7 +95,7 @@
     }
   
     .menu-bar-button {
-      font-size: 0.9rem;
+      font-size: 1.2vh;
       padding: 5px;
     }
 

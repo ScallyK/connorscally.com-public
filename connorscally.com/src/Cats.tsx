@@ -1,6 +1,3 @@
-import Dababy from './assets/images/dababy.png'
-import Kane from './assets/images/kane.png'
-import CatsBackground from './assets/images/cats-background.svg'
 import { Cursor } from './components/core/cursor';
 import { SVGProps } from 'react';
 import './assets/css/Cats.css';
@@ -60,8 +57,8 @@ export default function Cats() {
                 </Cursor>
                 {/* <span className='cat-text'>dababy</span> */}
                 <div className="cat-wrapper">
-                    <img src={CatsBackground} alt="A background SVG that sits behind pictures of my cats" className='cat-background' />
-                    <img src={Dababy} alt="An image of my cat, Dababy" className='cat-image' />
+                    <img src="/cats-background.svg" alt="A background SVG that sits behind pictures of my cats" className='cat-background' />
+                    <img src="/dababy.png" alt="An image of my cat, Dababy" className='cat-image' />
                 </div>
             </div>
             <div className="kane-container">
@@ -87,8 +84,8 @@ export default function Cats() {
                 </Cursor>
                 {/* <span className='cat-text'>kane</span> */}
                 <div className="cat-wrapper">
-                    <img src={CatsBackground} alt="A background SVG that sits behind pictures of my cats" className='cat-background' />
-                    <img src={Kane} alt="An image of my cat, Kane" className='cat-image' />
+                    <img src="/cats-background.svg" alt="A background SVG that sits behind pictures of my cats" className='cat-background' />
+                    <img src="/kane.png" alt="An image of my cat, Kane" className='cat-image' />
                 </div>
             </div>
             <div className="bottom-text">
